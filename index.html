@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Always</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Welcome Popup -->
+    <div class="welcome-overlay" id="welcomeOverlay">
+        <div class="welcome-popup">
+            <h2>Welcome ♥</h2>
+            <p>This website is a heartfelt gift created with love and dedication. A love that is not asking for a return. It's a collection of memories, emotions, and moments that I want to share with you.</p>
+            <p>Every page has been carefully crafted to express what words alone cannot convey. This is more than just a website. It's a piece of my heart, made especially for you.</p>
+            <p>Take your time exploring, and know that you are deeply loved and cherished.</p>
+            <br>
+            <p>Ps. Sorry if the design is very simple, I just started making them this afternoon hehe. Still not polished but don't worry, I'm still working on it hihi</p>
+            <p>Thank you for being patient♥</p>
+            <br>
+            <p>Sincerely,</p>
+            <p>Your Bibo Iko, Sky, Machi and Yuri</p>
+
+            <p></p>
+            
+            <div class="checkbox-container">
+                <input type="checkbox" id="agreeCheckbox">
+                <label for="agreeCheckbox">I have read and understood this message</label>
+            </div>
+            
+            <button class="welcome-btn" id="doneBtn">Enter</button>
+        </div>
+    </div>
+
+    <nav>
+        <div class="nav-content">
+            <div class="nav-links">
+                <a href="#" class="nav-link active" data-page="home">Home</a>
+                <a href="#" class="nav-link" data-page="letters">Letters</a>
+                <a href="#" class="nav-link" data-page="music">Music</a>
+                <a href="#" class="nav-link" data-page="countdown">Countdown</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HOME PAGE -->
+    <div id="home" class="page active">
+        <div class="hero-section">
+            <div class="hero-image">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1>♥</h1>
+                    <p>I Love You always and in all ways possible</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="intro-letter">
+                <h2>A Letter for You</h2>
+                <p>This is My Last Effort and My Final gift to you before I let go. Even if you will never visit this place again, even though you never 
+                    asked for this, and even though I didn't have to make an effort...</p>
+                <p>I still did...</p>
+                <p>Out of love, nothing else.</p>
+                
+                <p style="margin-top: 20px;">This website may look simple, but in the process of making this, every click of the mouse, every 
+                    letter I typed, every word you read carried a sting I couldn't ignore. I made this knowing it might be the last thing I ever do
+                    for you and that truth hurt more than I expected but I know in my heart everything in here, the tears, two sleepless nights are 
+                    all worth it because you deserve to be treated right.</p>
+                <p style="margin-top: 20px;">Every page, every word, every small detail carries a part of me, all done with you in mind. This isn't 
+                    just a website. It's where I put the things I couldn't say out loud, the love I didn't want to disappear, and the care I will 
+                    always hold for you.</p>
+                <p style="margin-top: 20px;">There's no pressure here. No expectations. Take your time always. Come back when you feel like it.
+                     I just want you to know that somewhere in this world, someone loved you deeply, gently, and sincerely.</p>
+                <p style="margin-top: 20px;">You are loved. You matter more than you probably realize and more than words could ever fully explain and 
+                    this is my way of making sure a part of me is always with you, always supporting you, always believing in you.</p>
+                <p style="font-style: italic; color: #8B7A87; margin-top: 20px;">P.s Gihigugma tika kanunay ♥</p>
+
+            </div>
+
+            <div class="polaroid-section">
+                <h3>Memorable Photos</h3>
+                <div class="polaroid-grid">
+                    <div class="polaroid" onclick="document.getElementById('fileInput1').click()">
+                        <div class="polaroid-image" id="polaroid1">
+                            <svg viewBox="0 0 24 24" width="80" height="80" fill="rgba(245, 164, 184, 0.4)">
+                                <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+                            </svg>
+                        </div>
+                        <div class="polaroid-caption">Yuriboy ♥</div>
+                        <input type="file" id="fileInput1" accept="image/*" style="display: none;">
+                    </div>
+                    <div class="polaroid" onclick="document.getElementById('fileInput2').click()">
+                        <div class="polaroid-image" id="polaroid2">
+                            <svg viewBox="0 0 24 24" width="80" height="80" fill="rgba(245, 164, 184, 0.4)">
+                                <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+                            </svg>
+                        </div>
+                        <div class="polaroid-caption">Ikay ♥</div>
+                        <input type="file" id="fileInput2" accept="image/*" style="display: none;">
+                    </div>
+                    <div class="polaroid" onclick="document.getElementById('fileInput3').click()">
+                        <div class="polaroid-image" id="polaroid3">
+                            <svg viewBox="0 0 24 24" width="80" height="80" fill="rgba(245, 164, 184, 0.4)">
+                                <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+                            </svg>
+                        </div>
+                        <div class="polaroid-caption">You ♥</div>
+                        <input type="file" id="fileInput3" accept="image/*" style="display: none;">
+                    </div>
+                    <div class="polaroid" onclick="document.getElementById('fileInput4').click()">
+                        <div class="polaroid-image" id="polaroid4">
+                            <svg viewBox="0 0 24 24" width="80" height="80" fill="rgba(245, 164, 184, 0.4)">
+                                <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+                            </svg>
+                        </div>
+                        <div class="polaroid-caption">Click to upload photo</div>
+                        <input type="file" id="fileInput4" accept="image/*" style="display: none;">
+                    </div>
+                    <div class="polaroid" onclick="document.getElementById('fileInput4').click()">
+                        <div class="polaroid-image" id="polaroid4">
+                            <svg viewBox="0 0 24 24" width="80" height="80" fill="rgba(245, 164, 184, 0.4)">
+                                <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+                            </svg>
+                        </div>
+                        <div class="polaroid-caption">Click to upload photo</div>
+                        <input type="file" id="fileInput4" accept="image/*" style="display: none;">
+                    </div>
+                    <div class="polaroid" onclick="document.getElementById('fileInput4').click()">
+                        <div class="polaroid-image" id="polaroid4">
+                            <svg viewBox="0 0 24 24" width="80" height="80" fill="rgba(245, 164, 184, 0.4)">
+                                <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+                            </svg>
+                        </div>
+                        <div class="polaroid-caption">Click to upload photo</div>
+                        <input type="file" id="fileInput4" accept="image/*" style="display: none;">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mood Checker -->
+            <div class="mood-section">
+                <h3>How are you feeling today?</h3>
+                <p>Let me know your mood, click me!</p>
+                <div class="mood-grid">
+                    <div class="mood-btn" data-mood="happy">
+                        <svg viewBox="0 0 24 24" width="50" height="50" fill="#F5A4B8">
+                            <circle cx="12" cy="12" r="10" fill="none" stroke="#F5A4B8" stroke-width="2"/>
+                            <circle cx="8" cy="9" r="1.5" fill="#F5A4B8"/>
+                            <circle cx="16" cy="9" r="1.5" fill="#F5A4B8"/>
+                            <path d="M7 14s1.5 3 5 3 5-3 5-3" fill="none" stroke="#F5A4B8" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="mood-btn" data-mood="sad">
+                        <svg viewBox="0 0 24 24" width="50" height="50" fill="#F5A4B8">
+                            <circle cx="12" cy="12" r="10" fill="none" stroke="#F5A4B8" stroke-width="2"/>
+                            <circle cx="8" cy="9" r="1.5" fill="#F5A4B8"/>
+                            <circle cx="16" cy="9" r="1.5" fill="#F5A4B8"/>
+                            <path d="M7 16s1.5-2 5-2 5 2 5 2" fill="none" stroke="#F5A4B8" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="mood-btn" data-mood="excited">
+                        <svg viewBox="0 0 24 24" width="50" height="50" fill="#F5A4B8">
+                            <circle cx="12" cy="12" r="10" fill="none" stroke="#F5A4B8" stroke-width="2"/>
+                            <circle cx="8" cy="10" r="2" fill="#F5A4B8"/>
+                            <circle cx="16" cy="10" r="2" fill="#F5A4B8"/>
+                            <ellipse cx="12" cy="15" rx="4" ry="3" fill="#F5A4B8"/>
+                        </svg>
+                    </div>
+                    <div class="mood-btn" data-mood="tired">
+                        <svg viewBox="0 0 24 24" width="50" height="50" fill="#F5A4B8">
+                            <circle cx="12" cy="12" r="10" fill="none" stroke="#F5A4B8" stroke-width="2"/>
+                            <path d="M6 9h4M14 9h4" stroke="#F5A4B8" stroke-width="2" stroke-linecap="round"/>
+                            <ellipse cx="12" cy="16" rx="3" ry="2" fill="none" stroke="#F5A4B8" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="mood-btn" data-mood="stressed">
+                        <svg viewBox="0 0 24 24" width="50" height="50" fill="#F5A4B8">
+                            <circle cx="12" cy="12" r="10" fill="none" stroke="#F5A4B8" stroke-width="2"/>
+                            <path d="M6 10l2-2M16 10l2-2" stroke="#F5A4B8" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M8 15h8" stroke="#F5A4B8" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="mood-btn" data-mood="loved">
+                        <svg viewBox="0 0 24 24" width="50" height="50" fill="#F5A4B8">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="mood-message" id="moodMessage"></div>
+            </div>
+
+            <!-- Message Box Section -->
+            <div class="message-box-section">
+                <h3>Need to Vent? I'm Here</h3>
+                <p class="message-subtitle">How are you feeling langga? Are you okay? You can rant here.<br>You don't have to keep everything with you okay? I'm here with you always.</p>
+                
+                <div class="message-box-container">
+                    <textarea id="rantTextarea" placeholder="I love you" maxlength="1000"></textarea>
+                    <div class="message-box-footer">
+                        <span class="char-count"><span id="charCount">0</span>/1000</span>
+                        <button class="send-btn" id="sendMessageBtn">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="white">
+                                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                            </svg>
+                            Send
+                        </button>
+                    </div>
+                </div>
+                
+                <p class="message-note">Don't worry langga, you don't have to be strong today :)<br>-ur iko</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- LETTERS PAGE -->
+    <div id="letters" class="page">
+        <!-- Letters Popup -->
+        <div class="letters-popup-overlay" id="lettersPopup">
+            <div class="letters-popup">
+                <h2>Letters From My Heart ✉</h2>
+                <p>These letters are pieces of my heart, written just for you. Each one carries feelings I couldn't always express in person.</p>
+                <p>Take your time reading them. There's no rush. They'll always be here whenever you need them.</p>
+                <p style="font-style: italic; color: #8B7A87; margin-top: 20px;">Sometimes the heart speaks better through written words than spoken ones.</p>
+                <button class="letters-popup-btn" id="closeLettersPopup">Read the Letters</button>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="letters-header">
+                <h2>Letters From My Heart</h2>
+            </div>
+
+            <!-- Special Letter Box -->
+            <div class="special-letter-box">
+                <div class="special-letter-content">
+                    <h3>. . .</h3>
+                    <p>This box is for me writing you something...</p>
+                    <p class="special-note">Coming soon ♥</p>
+                </div>
+            </div>
+
+            <div class="letters-grid">
+                <div class="letter-card" data-letter="0">
+                    <h3>The Beginning</h3>
+                    <p class="letter-preview">From the moment I met you, my world changed. You brought color to my days and warmth to my heart...</p>
+                    <p class="read-more">Read →</p>
+                </div>
+                <div class="letter-card" data-letter="1">
+                    <h3>My Promise</h3>
+                    <p class="letter-preview">I promise to always remember the way you made me feel. No matter what happens, these feelings are real...</p>
+                    <p class="read-more">Read →</p>
+                </div>
+                <div class="letter-card" data-letter="2">
+                    <h3>Gratitude</h3>
+                    <p class="letter-preview">Thank you for existing. Thank you for every smile, every conversation, every moment...</p>
+                    <p class="read-more">Read →</p>
+                </div>
+                <div class="letter-card" data-letter="3">
+                    <h3>Hope</h3>
+                    <p class="letter-preview">I hope you find happiness. I hope life gives you everything beautiful that you deserve...</p>
+                    <p class="read-more">Read →</p>
+                </div>
+                <div class="letter-card" data-letter="4">
+                    <h3>Always</h3>
+                    <p class="letter-preview">This isn't just a website. It's a piece of my heart, carefully crafted for you...</p>
+                    <p class="read-more">Read →</p>
+                </div>
+                <div class="letter-card" data-letter="5">
+                    <h3>My Final Words</h3>
+                    <p class="letter-preview">I built this because love isn't about expecting something in return. It's about giving all you have...</p>
+                    <p class="read-more">Read →</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MUSIC PAGE -->
+    <div class="music-popup-overlay" id="musicPopup">
+        <div class="music-popup">
+            <h2>The Playlist ♪</h2>
+            <p>These songs remind me of you of how constant my love has always been, and a way to hold you when words fall short. I made this playlist to remind you that no matter how heavy things feel, no matter how far or quiet it gets, my love for you doesn't change. It doesn't leave. It doesn't weaken.</p>
+            <p>Each song carries pieces of how I love you gently, patiently, and with intention. I hope they make you feel held and reassured, because that's how I love you: steadily, sincerely, and always.</p>
+            <p>When things feel heavy, when your heart gets tired, I hope these songs remind you that you are cared for, valued, and never alone. You don't have to be strong here. You can rest. Even in silence, even from a distance, my love stays steady, holding space for you, the way you deserve to be loved.</p>
+            <p style="font-style: italic; color: #8B7A87;"><strong>Note:</strong> Sorry if the playlist feels a bit short right now. I'm taking my time to pick songs that really describe how I feel about you and assure you about my love, I'll be adding more as I go.</p> 
+            <p>Thank you for understanding, I love you ♥</p>
+            <button class="music-popup-btn" id="closeMusicPopup">Listen to the Playlist</button>
+        </div>
+    </div>
+
+    <div id="music" class="page">
+        <div class="container">
+            <div class="music-container">
+                <div class="music-player-sticky">
+                    <div class="player-top">
+                        <div class="vinyl-container">
+                            <div class="vinyl" id="vinyl">
+                                <div class="vinyl-grooves"></div>
+                                <div class="vinyl-center">
+                                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23F5A4B8'/%3E%3Ctext x='50' y='60' text-anchor='middle' fill='white' font-size='40' font-family='Arial'%3E♪%3C/text%3E%3C/svg%3E" alt="Artist" class="artist-image" id="artistImage">
+                                    <div class="vinyl-hole"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="now-playing">
+                            <h3 id="currentSong">Thousand Years</h3>
+                            <p id="currentArtist">Christina Perri</p>
+                        </div>
+                    </div>
+                    
+                    <div class="time-display">
+                        <span id="currentTime">0:00</span>
+                        <span id="duration">0:00</span>
+                    </div>
+                    <div class="progress-bar" id="progressBar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    
+                    <div class="player-controls">
+                        <button class="control-btn" id="repeatBtn" title="Repeat">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                <path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"/>
+                            </svg>
+                        </button>
+                        <button class="control-btn" id="prevBtn" title="Previous">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/>
+                            </svg>
+                        </button>
+                        <button class="control-btn play-btn" id="playBtn">
+                            <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </button>
+                        <button class="control-btn" id="nextBtn" title="Next">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/>
+                            </svg>
+                        </button>
+                        <button class="control-btn" id="shuffleBtn" title="Shuffle">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                <path d="M10.59 9.17L5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.46 20 9.5V4h-5.5zm.33 9.41l-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.13-3.13z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="playlist">
+                    <h4>Playlist for You</h4>
+                    <div class="playlist-items" id="playlistItems"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- COUNTDOWN PAGE -->
+    <div id="countdown" class="page">
+        <div class="container">
+            <div class="countdown-wrapper">
+                <h2>Counting Down to Bibo Day</h2>
+                <p class="countdown-subtitle">September 7, 2026</p>
+                <div class="countdown-display">
+                    <div class="time-unit">
+                        <span class="time-number" id="days">0</span>
+                        <span class="time-label">Days</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-number" id="hours">0</span>
+                        <span class="time-label">Hours</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-number" id="minutes">0</span>
+                        <span class="time-label">Minutes</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-number" id="seconds">0</span>
+                        <span class="time-label">Seconds</span>
+                    </div>
+                </div>
+                <div class="birthday-message">
+                    <p>September 7, 2026 will be a special day to honor the person I love and everything she mean to me.</p>
+                    <p style="margin-top: 15px;">I'm sending this to you on January 2, 2026 at midnight. Until that day comes, know that you are thought of, loved, and cherished every single moment.</p>
+                    <p>Maybe... just maybe their will be a surpise here, if you won't forget this website exist.</p><br><br>
+                    <p>Coming Soon . . .</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Letter Modal -->
+    <div class="modal" id="letterModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeLetterModal">×</button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-message">
+                Made with endless love and dedication<br>
+                For the one who means everything to me
+            </div>
+            
+            <div class="footer-icons">
+                <a href="#" class="footer-icon" data-page="home" title="Home">♥</a>
+                <a href="#" class="footer-icon" data-page="letters" title="Letters">✉</a>
+                <a href="#" class="footer-icon" data-page="music" title="Music">♪</a>
+                <a href="#" class="footer-icon" data-page="countdown" title="Countdown">❀</a>
+            </div>
+        </div>
+    </footer>
+
+    <audio id="audioPlayer"></audio>
+    
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
