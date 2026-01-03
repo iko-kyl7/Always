@@ -1,5 +1,5 @@
 
-emailjs.init('YOUR_PUBLIC_KEY');
+emailjs.init('ZrKEu6jBdKIpxFxPk');
 
 
 const EMAILJS_SERVICE_ID = 'service_bib0';
@@ -181,7 +181,7 @@ sendMessageBtn.addEventListener('click', function() {
     const templateParams = {
         message: message,
         timestamp: new Date().toLocaleString(),
-        from_name: 'Langga' // You can customize this
+        from_name: 'Bibo' 
     };
     
     // Send email using EmailJS
@@ -618,3 +618,4 @@ function updateCountdown() {
 updateCountdown();
 
 setInterval(updateCountdown, 1000);
+
