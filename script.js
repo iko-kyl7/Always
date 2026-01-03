@@ -29,28 +29,22 @@ const footerIcons = document.querySelectorAll('.footer-icon');
 const pages = document.querySelectorAll('.page');
 
 function showPage(pageName) {
-    // Hide all pages
     pages.forEach(page => page.classList.remove('active'));
     
-    // Remove active class from all nav links
     navLinks.forEach(link => link.classList.remove('active'));
     
-    // Show selected page
     const selectedPage = document.getElementById(pageName);
     if (selectedPage) {
         selectedPage.classList.add('active');
     }
     
-    // Add active class to clicked nav link
     const activeLink = document.querySelector(`[data-page="${pageName}"]`);
     if (activeLink) {
         activeLink.classList.add('active');
     }
     
-    // Scroll to top
     window.scrollTo(0, 0);
     
-    // Show popups for specific pages
     if (pageName === 'music' && !sessionStorage.getItem('musicPopupShown')) {
         setTimeout(() => {
             document.getElementById('musicPopup').classList.add('show');
@@ -66,7 +60,6 @@ function showPage(pageName) {
     }
 }
 
-// Add event listeners to nav links
 navLinks.forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault();
@@ -84,9 +77,7 @@ footerIcons.forEach(icon => {
     });
 });
 
-// ============================================
 // POLAROID IMAGE UPLOAD
-// ============================================
 function setupPolaroidUploads() {
     for (let i = 1; i <= 4; i++) {
         const fileInput = document.getElementById(`fileInput${i}`);
@@ -106,7 +97,6 @@ function setupPolaroidUploads() {
                 }
             });
             
-            // Load saved image from localStorage
             const savedImage = localStorage.getItem(`polaroid${i}`);
             if (savedImage) {
                 polaroidImage.innerHTML = `<img src="${savedImage}" alt="Uploaded photo">`;
@@ -117,9 +107,7 @@ function setupPolaroidUploads() {
 
 setupPolaroidUploads();
 
-// ============================================
 // MOOD CHECKER
-// ============================================
 const moodButtons = document.querySelectorAll('.mood-btn');
 const moodMessage = document.getElementById('moodMessage');
 
@@ -145,14 +133,11 @@ moodButtons.forEach(button => {
     });
 });
 
-// ============================================
 // MESSAGE BOX (EMAILJS)
-// ============================================
 const rantTextarea = document.getElementById('rantTextarea');
 const charCount = document.getElementById('charCount');
 const sendMessageBtn = document.getElementById('sendMessageBtn');
 
-// Character counter
 rantTextarea.addEventListener('input', function() {
     const length = this.value.length;
     charCount.textContent = length;
@@ -164,7 +149,6 @@ rantTextarea.addEventListener('input', function() {
     }
 });
 
-// Send message via EmailJS
 sendMessageBtn.addEventListener('click', function() {
     const message = rantTextarea.value.trim();
     
@@ -173,11 +157,10 @@ sendMessageBtn.addEventListener('click', function() {
         return;
     }
     
-    // Disable button while sending
     sendMessageBtn.disabled = true;
     sendMessageBtn.innerHTML = '<span>Sending...</span>';
-    
-    // Prepare template parameters
+
+    //  edit lang sa EmailJs
     const templateParams = {
         message: message,
         timestamp: new Date().toLocaleString(),
@@ -201,9 +184,7 @@ sendMessageBtn.addEventListener('click', function() {
         });
 });
 
-// ============================================
 // LETTERS PAGE
-// ============================================
 const lettersPopup = document.getElementById('lettersPopup');
 const closeLettersPopupBtn = document.getElementById('closeLettersPopup');
 
@@ -296,9 +277,7 @@ letterModal.addEventListener('click', function(e) {
     }
 });
 
-// ============================================
 // MUSIC PLAYER
-// ============================================
 const musicPopup = document.getElementById('musicPopup');
 const closeMusicPopupBtn = document.getElementById('closeMusicPopup');
 
@@ -308,7 +287,7 @@ if (closeMusicPopupBtn) {
     });
 }
 
-// Song data
+// Songs
 const songs = [
     {
         title: "Thousand Years",
@@ -382,12 +361,7 @@ const songs = [
         src: "music/Ikaw at Ako.mp3",
         description: "TJ Montero"
     },
-    {
-        title: "Puhon",
-        artist: "TJ Montero",
-        src: "music/Puhon.mp3",
-        description: "TJ Montero"
-    },
+   
     {
         title: "Ikaw Ang Patutunguhan",
         artist: "Amiel Sol",
@@ -618,4 +592,5 @@ function updateCountdown() {
 updateCountdown();
 
 setInterval(updateCountdown, 1000);
+
 
